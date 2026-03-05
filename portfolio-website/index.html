@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Mahmudul Amin Rifat — Architecture Student, Graphics Designer, Photographer & AI/ML Enthusiast. Portfolio & CV." />
+    <title>Mahmudul Amin Rifat | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="particles" id="particles"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">R<span class="accent">.</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <div class="greeting reveal">Hi, I'm</div>
+                <h1 class="hero-name reveal">
+                    Mahmudul<br />
+                    <span class="name-gradient">Amin Rifat</span>
+                </h1>
+                <div class="hero-roles reveal">
+                    <span class="role-item active" id="roleText">Architecture Student</span>
+                </div>
+                <p class="hero-bio reveal">
+                    A visionary architecture student with a passion for blending the art of design
+                    with the power of technology. From crafting stunning visual identities to exploring
+                    the frontiers of Python, AI & Machine Learning — I build things that are both
+                    beautiful and intelligent. When I'm not designing or coding, you'll find me behind
+                    a camera, capturing the world through my lens.
+                </p>
+                <div class="hero-cta reveal">
+                    <a href="#portfolio" class="btn btn-primary" id="viewWorkBtn">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-ghost" id="contactBtn">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-socials reveal">
+                    <a href="https://www.linkedin.com/in/mahmudul-rifat-793310312/" target="_blank" class="social-icon"
+                        id="linkedinLink" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/iceebear11" target="_blank" class="social-icon" id="githubLink"
+                        aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.behance.net/mdrifat579" target="_blank" class="social-icon" id="behanceLink"
+                        aria-label="Behance">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                    <a href="https://www.instagram.com/i_rifat11/" target="_blank" class="social-icon"
+                        id="instagramLink" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:screwedone7@gmail.com" class="social-icon" id="emailLink" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-right reveal">
+                <div class="profile-wrapper">
+                    <div class="profile-ring"></div>
+                    <div class="profile-ring ring-2"></div>
+                    <div class="profile-img-container">
+                        <img src="images/profile.jpg" alt="Mahmudul Amin Rifat" class="profile-img" id="profileImg" />
+                    </div>
+                    <div class="profile-badge badge-1">
+                        <i class="fas fa-drafting-compass"></i>
+                        <span>Architecture</span>
+                    </div>
+                    <div class="profile-badge badge-2">
+                        <i class="fas fa-palette"></i>
+                        <span>Design</span>
+                    </div>
+                    <div class="profile-badge badge-3">
+                        <i class="fas fa-robot"></i>
+                        <span>AI / ML</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <div class="scroll-dot"></div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Who Am I</span>
+                <h2 class="section-title">About <span class="accent">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-card reveal" id="aboutCard1">
+                    <div class="about-icon"><i class="fas fa-university"></i></div>
+                    <h3>Education</h3>
+                    <p>Architecture Student at <strong>Rajshahi University of Engineering &amp; Technology
+                            (RUET)</strong>, developing spatial thinking and design excellence.</p>
+                    <p style="margin-top:0.6rem; font-size:0.82rem; color:#64748b;"><i class="fas fa-school"
+                            style="margin-right:0.35rem; color:#7c3aed;"></i>BP Government High School, Panchagarh</p>
+                </div>
+                <div class="about-card reveal" id="aboutCard2">
+                    <div class="about-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Creative Design</h3>
+                    <p>Passionate <strong>Graphics Designer</strong> skilled in Adobe Suite, Blender, SketchUp & Rhino —
+                        crafting visuals that speak louder than words.</p>
+                </div>
+                <div class="about-card reveal" id="aboutCard3">
+                    <div class="about-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Tech Explorer</h3>
+                    <p>Actively learning <strong>Python, AI & Machine Learning</strong> — bridging the gap between
+                        creativity and cutting-edge technology.</p>
+                </div>
+                <div class="about-card reveal" id="aboutCard4">
+                    <div class="about-icon"><i class="fas fa-camera"></i></div>
+                    <h3>Photography & More</h3>
+                    <p>A <strong>photographer</strong> at heart and a proud footballer — always finding beauty in
+                        motion, light, and life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-dark" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">My <span class="accent">Skills</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skills-col reveal">
+                    <h3 class="skills-cat-title"><i class="fas fa-layer-group"></i> Design & Software</h3>
+                    <div class="skill-item" id="skill-ps">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-image"></i> Adobe Photoshop</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="85"></div>
+                        </div>
+                        <span class="skill-badge advanced">Advanced</span>
+                    </div>
+                    <div class="skill-item" id="skill-ai">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-pen-nib"></i> Adobe Illustrator</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="85"></div>
+                        </div>
+                        <span class="skill-badge advanced">Advanced</span>
+                    </div>
+                    <div class="skill-item" id="skill-animate">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-film"></i> Adobe Animate</span>
+                            <span class="skill-percent">82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="82"></div>
+                        </div>
+                        <span class="skill-badge advanced">Advanced</span>
+                    </div>
+                    <div class="skill-item" id="skill-blender">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-cube"></i> Blender</span>
+                            <span class="skill-percent">83%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="83"></div>
+                        </div>
+                        <span class="skill-badge advanced">Advanced</span>
+                    </div>
+                    <div class="skill-item" id="skill-sketchup">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-drafting-compass"></i> SketchUp</span>
+                            <span class="skill-percent">84%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="84"></div>
+                        </div>
+                        <span class="skill-badge advanced">Advanced</span>
+                    </div>
+                    <div class="skill-item" id="skill-rhino">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-shapes"></i> Rhino</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="80"></div>
+                        </div>
+                        <span class="skill-badge advanced">Advanced</span>
+                    </div>
+                </div>
+                <div class="skills-col reveal">
+                    <h3 class="skills-cat-title"><i class="fas fa-code"></i> Tech & Others</h3>
+                    <div class="skill-item" id="skill-arch">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-building"></i> Architectural Design</span>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="65"></div>
+                        </div>
+                        <span class="skill-badge intermediate">Intermediate</span>
+                    </div>
+                    <div class="skill-item" id="skill-gd">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-palette"></i> Graphic Design</span>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="65"></div>
+                        </div>
+                        <span class="skill-badge intermediate">Intermediate</span>
+                    </div>
+                    <div class="skill-item" id="skill-python">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fab fa-python"></i> Python</span>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="60"></div>
+                        </div>
+                        <span class="skill-badge intermediate">Intermediate</span>
+                    </div>
+                    <div class="skill-item" id="skill-aiml">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-robot"></i> AI / Machine Learning</span>
+                            <span class="skill-percent">55%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="55"></div>
+                        </div>
+                        <span class="skill-badge intermediate">Intermediate</span>
+                    </div>
+                    <div class="skill-item" id="skill-photo">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-camera"></i> Photography</span>
+                            <span class="skill-percent">65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="65"></div>
+                        </div>
+                        <span class="skill-badge intermediate">Intermediate</span>
+                    </div>
+                    <div class="skill-item" id="skill-football">
+                        <div class="skill-header">
+                            <span class="skill-name"><i class="fas fa-futbol"></i> Football</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-width="75"
+                                style="background: linear-gradient(90deg, #16a34a, #4ade80);"></div>
+                        </div>
+                        <span class="skill-badge hobby">Hobby</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section" id="portfolio">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Portfolio <span class="accent">Gallery</span></h2>
+                <p class="section-subtitle">Explore my projects across different disciplines</p>
+            </div>
+
+            <!-- Portfolio Tabs -->
+            <div class="portfolio-tabs reveal">
+                <button class="tab-btn active" data-tab="all" id="tabAll">All</button>
+                <button class="tab-btn" data-tab="aiml" id="tabAiml"><i class="fas fa-robot"></i> AI / ML</button>
+                <button class="tab-btn" data-tab="architecture" id="tabArch"><i class="fas fa-drafting-compass"></i>
+                    Architecture</button>
+                <button class="tab-btn" data-tab="photography" id="tabPhoto"><i class="fas fa-camera"></i>
+                    Photography</button>
+                <button class="tab-btn" data-tab="artworks" id="tabArt"><i class="fas fa-palette"></i> Artworks</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolioGrid">
+
+                <!-- AI/ML Section -->
+                <div class="portfolio-item reveal" data-category="aiml" id="port-aiml-1">
+                    <div class="portfolio-card placeholder-card">
+                        <div class="placeholder-inner">
+                            <div class="placeholder-icon"><i class="fas fa-robot"></i></div>
+                            <span class="placeholder-cat">AI / ML</span>
+                            <h3>Coming Soon</h3>
+                            <p>Your AI & Machine Learning projects will be showcased here.</p>
+                            <div class="upload-hint"><i class="fas fa-plus-circle"></i> Add Project</div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>AI / ML Project</h4>
+                        <span class="port-tag">Machine Learning</span>
+                    </div>
+                </div>
+
+                <!-- Architecture Section -->
+                <div class="portfolio-item reveal" data-category="architecture" id="port-arch-1">
+                    <div class="portfolio-card placeholder-card arch-placeholder">
+                        <div class="placeholder-inner">
+                            <div class="placeholder-icon"><i class="fas fa-building"></i></div>
+                            <span class="placeholder-cat">Architecture</span>
+                            <h3>Coming Soon</h3>
+                            <p>Your architectural designs and university projects will appear here.</p>
+                            <div class="upload-hint"><i class="fas fa-plus-circle"></i> Add Project</div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Architectural Portfolio</h4>
+                        <span class="port-tag">Architecture</span>
+                    </div>
+                </div>
+
+                <!-- Photography Section -->
+                <div class="portfolio-item reveal" data-category="photography" id="port-photo-1">
+                    <div class="portfolio-card placeholder-card photo-placeholder">
+                        <div class="placeholder-inner">
+                            <div class="placeholder-icon"><i class="fas fa-camera-retro"></i></div>
+                            <span class="placeholder-cat">Photography</span>
+                            <h3>Coming Soon</h3>
+                            <p>Your stunning photography collection will be displayed here.</p>
+                            <div class="upload-hint"><i class="fas fa-plus-circle"></i> Add Photos</div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Photography Collection</h4>
+                        <span class="port-tag">Photography</span>
+                    </div>
+                </div>
+
+                <!-- Artworks Section -->
+                <div class="portfolio-item reveal" data-category="artworks" id="port-art-1">
+                    <div class="portfolio-card placeholder-card art-placeholder">
+                        <div class="placeholder-inner">
+                            <div class="placeholder-icon"><i class="fas fa-paint-brush"></i></div>
+                            <span class="placeholder-cat">Artworks</span>
+                            <h3>Coming Soon</h3>
+                            <p>Your graphic designs, illustrations and artworks will shine here.</p>
+                            <div class="upload-hint"><i class="fas fa-plus-circle"></i> Add Artwork</div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Creative Artworks</h4>
+                        <span class="port-tag">Graphic Design</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-dark" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Let's Talk</span>
+                <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+                <p class="section-subtitle">Have a project in mind or just want to say hello? I'd love to hear from you!
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="contact-card" id="contactEmail">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:screwedone7@gmail.com">screwedone7@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card" id="contactPhone">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+8801840150075">+880 1840150075</a>
+                        </div>
+                    </div>
+                    <div class="contact-card" id="contactLocation">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-details">
+                            <span class="contact-label">Current Location</span>
+                            <span>Rajshahi, Bangladesh</span>
+                        </div>
+                    </div>
+                    <div class="contact-card" id="contactHometown">
+                        <div class="contact-icon"><i class="fas fa-home"></i></div>
+                        <div class="contact-details">
+                            <span class="contact-label">Hometown</span>
+                            <span>Mymensingh, Bangladesh</span>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/mahmudul-rifat-793310312/" target="_blank"
+                            class="contact-social-link" id="contactLinkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/iceebear11" target="_blank" class="contact-social-link"
+                            id="contactGithub">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.behance.net/mdrifat579" target="_blank" class="contact-social-link"
+                            id="contactBehance">
+                            <i class="fab fa-behance"></i>
+                            <span>Behance</span>
+                        </a>
+                        <a href="https://www.instagram.com/i_rifat11/" target="_blank" class="contact-social-link"
+                            id="contactInstagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="formName" name="name" placeholder="Your Name" required />
+                            <label for="formName">Your Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" name="email" placeholder="Your Email" required />
+                            <label for="formEmail">Your Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="formSubject" name="subject" placeholder="Subject" />
+                            <label for="formSubject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="formMessage" name="message" rows="5" placeholder="Your Message"
+                                required></textarea>
+                            <label for="formMessage">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">R<span class="accent">.</span></div>
+            <p>Designed & Built by <strong>Mahmudul Amin Rifat</strong></p>
+            <p class="footer-copy">© 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
