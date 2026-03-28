@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artworks | Mahmudul Amin Rifat</title>
+    <!-- Same head content as main site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .artworks-page {
+            padding: 120px 20px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 80vh;
+        }
+        .masonry-grid {
+            column-count: 2;
+            column-gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .masonry-grid {
+                column-count: 1;
+            }
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+            text-decoration: none;
+            padding: 10px 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            margin-bottom: 40px;
+            transition: var(--transition);
+        }
+        .back-btn:hover {
+            background: rgba(124, 58, 237, 0.1);
+            border-color: var(--accent);
+            color: var(--accent-2);
+        }
+        .artwork-post {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-bottom: 30px;
+            display: inline-block;
+            width: 100%;
+            transition: var(--transition);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            break-inside: avoid;
+        }
+        .artwork-post:hover {
+            border-color: rgba(124, 58, 237, 0.4);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transform: translateY(-5px);
+        }
+        .artwork-img-wrapper {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+        }
+        .artwork-img-wrapper img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+            display: block;
+        }
+        .artwork-details {
+            padding: 30px;
+        }
+        .artwork-details h2 {
+            font-family: var(--font-head);
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--text);
+        }
+        .artwork-details p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        .img-placeholder {
+            padding: 100px 20px;
+            text-align: center;
+            color: var(--text-muted);
+            background: rgba(0,0,0,0.3);
+            width: 100%;
+        }
+        .img-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--accent-2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">R<span class="accent">.</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="artworks-page">
+        <a href="index.html#portfolio" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to the Main Page
+        </a>
+
+        <div class="section-header text-center" style="margin-bottom: 50px;">
+            <span class="section-tag">Digital Gallery</span>
+            <h1 class="section-title">My <span class="accent">Artworks</span></h1>
+        </div>
+
+        <div class="masonry-grid">
+            <!-- Artwork 1 -->
+            <article class="artwork-post reveal">
+                <div class="artwork-img-wrapper">
+                    <!-- If the image cannot load, the placeholder script will show -->
+                    <img src="images/martyrs-memorial.png" alt="Independence Memorial" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="img-placeholder" style="display: none;">
+                        <i class="fas fa-image"></i>
+                        <p>Oops! The image file wasn't found.<br>Please save the red/green illustration as <b>martyrs-memorial.png</b> in your <b>images</b> folder.</p>
+                    </div>
+                </div>
+                <div class="artwork-details">
+                    <h2>Independence Memorial</h2>
+                    <p>A striking and dramatic illustration featuring the National Martyrs' Memorial of Bangladesh, emphasizing historical sacrifice against a bold dark teal background with powerful red accents and deep, contrasting shadows.</p>
+                </div>
+            </article>
+
+            <!-- Artwork 2 -->
+            <article class="artwork-post reveal">
+                <div class="artwork-img-wrapper">
+                    <img src="images/ending-underwater.png" alt="Sinking Silence" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="img-placeholder" style="display: none;">
+                        <i class="fas fa-image"></i>
+                        <p>Oops! The image file wasn't found.<br>Please save the underwater illustration as <b>ending-underwater.png</b> in your <b>images</b> folder.</p>
+                    </div>
+                </div>
+                <div class="artwork-details">
+                    <h2>Sinking Silence</h2>
+                    <p>An atmospheric piece showing a figure falling backward in deep teal waters alongside drafting tools like a set square and drawing tube. The faded text "ENDING" anchors the scene, creating a mysterious narrative.</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="section-header text-center" style="margin-top: 80px; margin-bottom: 50px;">
+            <span class="section-tag">Brand Identity</span>
+            <h1 class="section-title">Logo <span class="accent">Designs</span></h1>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 50px;">
+            <!-- Logo 1 -->
+            <article class="artwork-post reveal" style="margin-bottom: 0;">
+                <div class="artwork-img-wrapper" style="border-bottom: none; background: #fff; padding: 20px;">
+                    <img src="images/logo-1.png" alt="Logo Design 1" style="object-fit: contain; width: 100%; height: auto; max-height: 400px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="img-placeholder" style="display: none; padding: 50px 20px; background: rgba(0,0,0,0.1); color: var(--text);">
+                        <i class="fas fa-image"></i>
+                        <p>Please save image as<br><b>logo-1.png</b></p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Logo 2 -->
+            <article class="artwork-post reveal" style="margin-bottom: 0;">
+                <div class="artwork-img-wrapper" style="border-bottom: none; background: #000; padding: 20px;">
+                    <img src="images/logo-2.png" alt="Logo Design 2" style="object-fit: contain; width: 100%; height: auto; max-height: 400px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="img-placeholder" style="display: none; padding: 50px 20px;">
+                        <i class="fas fa-image"></i>
+                        <p>Please save image as<br><b>logo-2.png</b></p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Logo 3 -->
+            <article class="artwork-post reveal" style="margin-bottom: 0;">
+                <div class="artwork-img-wrapper" style="border-bottom: none; background: #fff; padding: 20px;">
+                    <img src="images/logo-3.png" alt="Logo Design 3" style="object-fit: contain; width: 100%; height: auto; max-height: 400px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="img-placeholder" style="display: none; padding: 50px 20px; background: rgba(0,0,0,0.1); color: var(--text);">
+                        <i class="fas fa-image"></i>
+                        <p>Please save image as<br><b>logo-3.png</b></p>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">R<span class="accent">.</span></div>
+            <p>Designed & Built by <strong>Mahmudul Amin Rifat</strong></p>
+            <p class="footer-copy">© 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple script to handle 'reveal' animations on scroll if the generic script.js is missing it for this page
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+                
+                reveals.forEach(reveal => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Trigger immediately
+        });
+    </script>
+</body>
+</html>

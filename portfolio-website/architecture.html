@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture | Mahmudul Amin Rifat</title>
+    <!-- Same head content as main site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .architecture-page {
+            padding: 120px 20px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: 80vh;
+        }
+        .masonry-grid {
+            column-count: 2;
+            column-gap: 30px;
+        }
+        @media (max-width: 768px) {
+            .masonry-grid {
+                column-count: 1;
+            }
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text);
+            text-decoration: none;
+            padding: 10px 20px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            margin-bottom: 40px;
+            transition: var(--transition);
+        }
+        .back-btn:hover {
+            background: rgba(124, 58, 237, 0.1);
+            border-color: var(--accent);
+            color: var(--accent-2);
+        }
+        
+        .comp-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            margin-bottom: 30px;
+            display: inline-block;
+            width: 100%;
+            transition: var(--transition);
+            break-inside: avoid;
+        }
+        .comp-card:hover {
+            border-color: rgba(245, 158, 11, 0.4);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+            transform: translateY(-5px);
+        }
+        
+        /* Competition Layout */
+        .comp-img-wrapper {
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid var(--border);
+            padding: 20px;
+        }
+        .comp-img-wrapper img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: var(--radius-sm);
+        }
+        .comp-info {
+            padding: 35px;
+        }
+        .comp-info h2 {
+            font-family: var(--font-head);
+            font-size: 2rem;
+            color: var(--text);
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+        .comp-tag {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            color: #fcd34d;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        .team-list {
+            margin-top: 15px;
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        .team-list li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .team-list li i {
+            color: var(--accent-3);
+            font-size: 0.8rem;
+        }
+
+        /* Year Portfolios */
+        .year-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        .year-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 30px 20px;
+            text-align: center;
+            transition: var(--transition);
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+        .year-card:hover {
+            background: rgba(245, 158, 11, 0.05);
+            border-color: rgba(245, 158, 11, 0.4);
+            transform: translateY(-5px);
+        }
+        .year-icon {
+            font-size: 2.2rem;
+            background: var(--gradient-warm);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .year-card h3 {
+            font-family: var(--font-head);
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .year-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        .year-status {
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.05);
+            margin-top: auto;
+        }
+        .status-ready {
+            color: #4ade80;
+            background: rgba(74, 222, 128, 0.1);
+            border: 1px solid rgba(74, 222, 128, 0.2);
+        }
+        .status-upcoming {
+            color: var(--text-dim);
+            border: 1px solid var(--border);
+        }
+        
+        .img-placeholder {
+            padding: 80px 20px;
+            text-align: center;
+            color: var(--text-muted);
+        }
+        .img-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--accent-3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">R<span class="accent">.</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="architecture-page">
+        <a href="index.html#portfolio" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Main Page
+        </a>
+
+        <!-- Academic Portfolios Section -->
+        <div class="section-header text-center" style="margin-bottom: 40px;">
+            <span class="section-tag" style="background: rgba(245, 158, 11, 0.1); color: var(--accent-3); border-color: rgba(245, 158, 11, 0.3);">Academic Progress</span>
+            <h1 class="section-title">Academic <span style="color: var(--accent-3);">Portfolios</span></h1>
+            <p class="section-subtitle">A collection of my architectural designs from each year.</p>
+        </div>
+
+        <div class="year-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+            <!-- 1st Year Odd Semester -->
+            <a href="https://drive.google.com/file/d/1WnBuo5X1qrw_F8hsl7kprZK06cp2ptkv/view?usp=sharing" target="_blank" class="year-card reveal">
+                <i class="fas fa-drafting-compass year-icon"></i>
+                <h3>1st Year: Odd Semester</h3>
+                <p>Academic Projects</p>
+                <div class="year-status status-ready"><i class="fas fa-check-circle" style="margin-right: 5px;"></i>View Portfolio</div>
+            </a>
+
+            <!-- 1st Year Even Semester -->
+            <a href="#" class="year-card reveal" style="pointer-events: none;">
+                <i class="fas fa-ruler-combined year-icon"></i>
+                <h3>1st Year: Even Semester</h3>
+                <p>Coming Soon</p>
+                <div class="year-status status-upcoming">Pending Upload</div>
+            </a>
+
+            <!-- 2nd Year Odd Semester -->
+            <a href="#" class="year-card reveal" style="pointer-events: none;">
+                <i class="fas fa-pen-ruler year-icon"></i>
+                <h3>2nd Year: Odd Semester</h3>
+                <p>Coming Soon</p>
+                <div class="year-status status-upcoming">Pending Upload</div>
+            </a>
+
+            <!-- 2nd Year Even Semester -->
+            <a href="#" class="year-card reveal" style="pointer-events: none;">
+                <i class="fas fa-compass year-icon"></i>
+                <h3>2nd Year: Even Semester</h3>
+                <p>Coming Soon</p>
+                <div class="year-status status-upcoming">Pending Upload</div>
+            </a>
+
+            <!-- 3rd Year Odd Semester -->
+            <a href="#" class="year-card reveal" style="pointer-events: none;">
+                <i class="fas fa-vector-square year-icon"></i>
+                <h3>3rd Year: Odd Semester</h3>
+                <p>Coming Soon</p>
+                <div class="year-status status-upcoming">Pending Upload</div>
+            </a>
+
+            <!-- 3rd Year Even Semester -->
+            <a href="#" class="year-card reveal" style="pointer-events: none;">
+                <i class="fas fa-building year-icon"></i>
+                <h3>3rd Year: Even Semester</h3>
+                <p>Coming Soon</p>
+                <div class="year-status status-upcoming">Pending Upload</div>
+            </a>
+            
+            <!-- 4th Year Odd Semester -->
+            <a href="#" class="year-card reveal" style="pointer-events: none;">
+                <i class="fas fa-city year-icon"></i>
+                <h3>4th Year: Odd Semester</h3>
+                <p>Coming Soon</p>
+                <div class="year-status status-upcoming">Pending Upload</div>
+            </a>
+
+            <!-- 4th Year Even Semester -->
+            <a href="#" class="year-card reveal" style="pointer-events: none;">
+                <i class="fas fa-cogs year-icon"></i>
+                <h3>4th Year: Even Semester</h3>
+                <p>Coming Soon</p>
+                <div class="year-status status-upcoming">Pending Upload</div>
+            </a>
+
+            <!-- 5th Year Odd Semester -->
+            <a href="#" class="year-card reveal" style="pointer-events: none;">
+                <i class="fas fa-layer-group year-icon"></i>
+                <h3>5th Year: Odd Semester</h3>
+                <p>Coming Soon</p>
+                <div class="year-status status-upcoming">Pending Upload</div>
+            </a>
+
+            <!-- 5th Year Even Semester -->
+            <a href="#" class="year-card reveal" style="pointer-events: none;">
+                <i class="fas fa-monument year-icon"></i>
+                <h3>5th Year: Even Semester</h3>
+                <p>Coming Soon</p>
+                <div class="year-status status-upcoming">Pending Upload</div>
+            </a>
+        </div>
+
+
+        <!-- International Competitions Section -->
+        <div class="section-header text-center" style="margin-top: 80px; margin-bottom: 40px;">
+            <span class="section-tag" style="background: rgba(245, 158, 11, 0.1); color: var(--accent-3); border-color: rgba(245, 158, 11, 0.3);">Global Recognition</span>
+            <h1 class="section-title">International <span style="color: var(--accent-3);">Competitions</span></h1>
+        </div>
+
+        <div class="masonry-grid">
+            <article class="comp-card reveal">
+                <div class="comp-img-wrapper">
+                    <img src="images/claymire-competition.png" alt="10 Cubic Meter Challenge" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <div class="img-placeholder" style="display: none;">
+                        <i class="fas fa-image"></i>
+                        <p>Image not found.<br>Please save the presentation board as <b>claymire-competition.png</b> in your <b>images</b> folder.</p>
+                    </div>
+                </div>
+                <div class="comp-info">
+                    <h2>10 Cubic Meter Challenge</h2>
+                    <span class="comp-tag">Hosted by Claymire</span>
+                    <p style="color: var(--text-muted); line-height: 1.7;">My very first architectural international competition. The challenge tasked us with designing a spatial concept constrained within exactly 10 cubic meters. It pushed the boundaries of functional design and space efficiency.</p>
+                    
+                    <h4 style="margin-top: 25px; margin-bottom: 5px; font-family: var(--font-head); font-size: 1.1rem;">Team Members</h4>
+                    <ul class="team-list">
+                        <li><i class="fas fa-user-circle"></i> Mahmudul Amin Rifat</li>
+                        <li><i class="fas fa-user-circle"></i> MD AL Sayeedil Rivan</li>
+                        <li><i class="fas fa-user-circle"></i> Munirujjaman Rivan</li>
+                        <li><i class="fas fa-user-circle"></i> Sanjida Aktar Taha</li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">R<span class="accent">.</span></div>
+            <p>Designed & Built by <strong>Mahmudul Amin Rifat</strong></p>
+            <p class="footer-copy">© 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+                
+                reveals.forEach(reveal => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll();
+        });
+    </script>
+</body>
+</html>
