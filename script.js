@@ -28,8 +28,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
 const roles = [
   'Architecture Student',
   'Graphics Designer',
-  'Python Enthusiast',
-  'AI / ML Learner',
   'Photographer',
   'Football Lover'
 ];
@@ -230,3 +228,4 @@ window.addEventListener('mousemove', (e) => {
   cursorGlow.style.left = e.clientX + 'px';
   cursorGlow.style.top = e.clientY + 'px';
 });
+
