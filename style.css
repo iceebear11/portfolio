@@ -626,6 +626,18 @@ body {
   line-height: 1.7;
 }
 
+.about-card p a {
+  color: var(--accent-2);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--accent-2);
+  transition: var(--transition);
+}
+
+.about-card p a:hover {
+  color: var(--accent-3);
+  border-bottom-color: var(--accent-3);
+}
+
 /* ===========================
    SKILLS
 =========================== */
